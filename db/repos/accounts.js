@@ -14,6 +14,8 @@
 'use strict';
 
 var PQ = require('pg-promise').ParameterizedQuery;
+var QF = require('pg-promise').QueryFile;
+var path = require('path');
 var columnSet;
 
 /**
@@ -61,7 +63,9 @@ var Queries = {
 
 	getDelegates: 'SELECT ENCODE("publicKey", \'hex\') FROM mem_accounts WHERE "isDelegate" = 1',
 
-	upsert: PQ('INSERT INTO mem_accounts $1 VALUES $2 ON CONFLICT($3) DO UPDATE SET $4')
+	upsert: new PQ('INSERT INTO mem_accounts $1 VALUES $2 ON CONFLICT($3) DO UPDATE SET $4'),
+
+	resetMemTables: new QF(path.join(process.cwd(), './db/sql/init/resetMemoryTables.sql'), {minify: true, params: {schema: 'public'}})
 };
 
 /**
@@ -109,6 +113,20 @@ AccountsRepo.prototype.upsert = function (data, conflictingFields) {
 			'ON CONFLICT ( ' + conflictingFields.join(',') + ') DO',
 			this.pgp.helpers.update(this.cs, data)
 		]));
+};
+
+/**
+ * Clear data in memory tables
+ * - mem_round
+ * - mem_accounts2delegates
+ * - mem_accounts2u_delegates
+ * - mem_accounts2multisignatures
+ * - mem_accounts2u_multisignatures
+ *
+ * @return {Promise}
+ */
+AccountsRepo.prototype.resetMemTables = function () {
+	return this.db.none(Queries.resetMemTables);
 };
 
 module.exports = AccountsRepo;

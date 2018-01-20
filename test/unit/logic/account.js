@@ -181,7 +181,7 @@ describe('account', function () {
 			account.get({address: validAccount.address}, requestedFields, function (err, res) {
 				expect(err).to.not.exist;
 				expect(res).to.be.an('object');
-				expect(Object.keys(res)).to.eql(requestedFields);
+				expect(Object.keys(res).sort()).to.eql(requestedFields.sort());
 				done();
 			});
 		});
@@ -189,7 +189,7 @@ describe('account', function () {
 		it('should get all fields if fields parameters is not set', function (done) {
 			account.get({address: validAccount.address}, function (err, res) {
 				expect(err).to.not.exist;
-				expect(Object.keys(res)).to.eql(Object.keys(validAccount));
+				expect(Object.keys(res).sort()).to.eql(Object.keys(validAccount).sort());
 				done();
 			});
 		});
@@ -207,7 +207,7 @@ describe('account', function () {
 				expect(err).to.not.exist;
 				expect(res).to.be.an('object');
 				expect(res.username).to.equal(validAccount.username);
-				expect(res.isDelegate).to.equal(validAccount.isDelegate);
+				expect(res.isDelegate).to.equal((validAccount.isDelegate ? true : false));
 				expect(res.address).to.equal(validAccount.address);
 				expect(res.publicKey).to.equal(validAccount.publicKey);
 				expect(res.delegates).to.equal(validAccount.delegates);
@@ -299,7 +299,7 @@ describe('account', function () {
 			account.get({address: validAccount.address}, requestedFields, function (err, res) {
 				expect(err).to.not.exist;
 				expect(res).to.be.an('object');
-				expect(Object.keys(res)).to.eql(requestedFields);
+				expect(Object.keys(res).sort()).to.eql(requestedFields.sort());
 				done();
 			});
 		});
@@ -373,7 +373,7 @@ describe('account', function () {
 				expect(err).to.not.exist;
 				expect(res.length).to.equal(1);
 				expect(res[0].username).to.equal(validAccount.username);
-				expect(res[0].isDelegate).to.equal(validAccount.isDelegate);
+				expect(res[0].isDelegate).to.equal((validAccount.isDelegate ? true : false));
 				expect(res[0].address).to.equal(validAccount.address);
 				expect(res[0].publicKey).to.equal(validAccount.publicKey);
 				expect(res[0].delegates).to.equal(validAccount.delegates);
@@ -386,7 +386,7 @@ describe('account', function () {
 				expect(err).to.not.exist;
 				expect(res.length).to.equal(1);
 				expect(res[0].username).to.equal(validAccount.username);
-				expect(res[0].isDelegate).to.equal(validAccount.isDelegate);
+				expect(res[0].isDelegate).to.equal((validAccount.isDelegate ? true : false));
 				expect(res[0].address).to.equal(validAccount.address);
 				expect(res[0].publicKey).to.equal(validAccount.publicKey);
 				expect(res[0].delegates).to.equal(validAccount.delegates);
@@ -399,7 +399,7 @@ describe('account', function () {
 				expect(err).to.not.exist;
 				expect(res.length).to.equal(1);
 				expect(res[0].username).to.equal(validAccount.username);
-				expect(res[0].isDelegate).to.equal(validAccount.isDelegate);
+				expect(res[0].isDelegate).to.equal((validAccount.isDelegate ? true : false));
 				expect(res[0].address).to.equal(validAccount.address);
 				expect(res[0].publicKey).to.equal(validAccount.publicKey);
 				expect(res[0].delegates).to.equal(validAccount.delegates);
@@ -411,7 +411,7 @@ describe('account', function () {
 			account.getAll({isDelegate: 1}, function (err, res) {
 				expect(err).to.not.exist;
 				expect(res.filter(function (a) {
-					return a.isDelegate === 1;
+					return a.isDelegate === true;
 				}).length).to.equal(res.length);
 				done();
 			});

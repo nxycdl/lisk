@@ -29,7 +29,7 @@ var constants = require('../../../helpers/constants');
 
 var typeRepresentatives = require('../../fixtures/typesRepresentatives.js');
 
-var testData = require('./testData/dapp.js');
+var testData = require('./test_data/dapp.js');
 
 var validPassword = testData.validPassword;
 var validKeypair = testData.validKeypair;

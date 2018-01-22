@@ -18,7 +18,7 @@ var crypto = require('crypto');
 var async = require('async');
 var rewire = require('rewire');
 
-var testData = require('./testData/multisignature');
+var testData = require('./test_data/multisignature');
 var accountFixtures = require('../../fixtures/accounts');
 
 var constants = require('../../../helpers/constants');

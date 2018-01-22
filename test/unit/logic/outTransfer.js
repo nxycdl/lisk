@@ -24,7 +24,7 @@ var ed = require('../../../helpers/ed');
 var constants = require('../../../helpers/constants');
 var slots = require('../../../helpers/slots');
 
-var testData = require('./testData/outTransfer');
+var testData = require('./test_data/outTransfer');
 
 var validPassword = testData.validPassword;
 var validKeypair = testData.validKeypair;

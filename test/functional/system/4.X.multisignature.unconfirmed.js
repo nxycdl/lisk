@@ -15,11 +15,11 @@
 
 var lisk = require('lisk-js');
 
-var accountFixtures = require('../../../../fixtures/accounts');
-var randomUtil = require('../../../../common/utils/random');
-var Scenarios = require('../../../common/scenarios');
-var localCommon = require('../../common');
-var transactionTypes = require('../../../../../helpers/transaction_types.js');
+var accountFixtures = require('../../fixtures/accounts');
+var randomUtil = require('../../common/utils/random');
+var Scenarios = require('../common/scenarios');
+var localCommon = require('./common');
+var transactionTypes = require('../../../helpers/transaction_types.js');
 
 describe('system test (type 4) - sending transactions on top of unconfirmed multisignature registration', function () {
 

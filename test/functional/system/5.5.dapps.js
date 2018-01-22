@@ -16,10 +16,10 @@
 var lisk = require('lisk-js');
 var async = require('async');
 
-var accountFixtures = require('../../../../fixtures/accounts');
-var randomUtil = require('../../../../common/utils/random');
-var localCommon = require('../../common');
-var normalizer = require('../../../../common/utils/normalizer');
+var accountFixtures = require('../../fixtures/accounts');
+var randomUtil = require('../../common/utils/random');
+var localCommon = require('./common');
+var normalizer = require('../../common/utils/normalizer');
 
 describe('system test (type 5) - dapp registrations with repeated values', function () {
 

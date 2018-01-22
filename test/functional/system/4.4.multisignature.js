@@ -15,10 +15,10 @@
 
 var lisk = require('lisk-js');
 
-var accountFixtures = require('../../../../fixtures/accounts');
-var randomUtil = require('../../../../common/utils/random');
-var Scenarios = require('../../../common/scenarios');
-var localCommon = require('../../common');
+var accountFixtures = require('../../fixtures/accounts');
+var randomUtil = require('../../common/utils/random');
+var Scenarios = require('../common/scenarios');
+var localCommon = require('./common');
 
 describe('system test (type 4) - double multisignature registrations', function () {
 

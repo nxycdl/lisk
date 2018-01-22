@@ -15,10 +15,10 @@
 
 var lisk = require('lisk-js');
 
-var accountFixtures = require('../../../../fixtures/accounts');
-var randomUtil = require('../../../../common/utils/random');
-var localCommon = require('../../common');
-var normalizer = require('../../../../common/utils/normalizer');
+var accountFixtures = require('../../fixtures/accounts');
+var randomUtil = require('../../common/utils/random');
+var localCommon = require('./common');
+var normalizer = require('../../common/utils/normalizer');
 
 describe('system test (type 1) - double second signature registrations', function () {
 

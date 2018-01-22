@@ -17,19 +17,19 @@ var randomstring = require('randomstring');
 var lisk = require('lisk-js');
 var Promise = require('bluebird');
 
-var common = require('../../common');
-var phases = require('../../../../common/phases');
-var accountFixtures = require('../../../../../fixtures/accounts');
+var common = require('./common');
+var phases = require('../../common/phases');
+var accountFixtures = require('../../../fixtures/accounts');
 
-var apiCodes = require('../../../../../../helpers/api_codes');
-var constants = require('../../../../../../helpers/constants');
+var apiCodes = require('../../../../helpers/api_codes');
+var constants = require('../../../../helpers/constants');
 
-var randomUtil = require('../../../../../common/utils/random');
-var normalizer = require('../../../../../common/utils/normalizer');
-var waitFor = require('../../../../../common/utils/waitFor');
-var apiHelpers = require('../../../../../common/helpers/api');
+var randomUtil = require('../../../common/utils/random');
+var normalizer = require('../../../common/utils/normalizer');
+var waitFor = require('../../../common/utils/waitFor');
+var apiHelpers = require('../../../common/helpers/api');
 var sendTransactionPromise = apiHelpers.sendTransactionPromise;
-var errorCodes = require('../../../../../../helpers/api_codes');
+var errorCodes = require('../../../../helpers/api_codes');
 
 describe('POST /api/transactions (type 5) register dapp', function () {
 

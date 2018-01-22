@@ -13,8 +13,8 @@
  */
 'use strict';
 
-var connectionsTable = require('./connectionsTable');
-var SlaveToMasterSender = require('./slaveToMasterSender');
+var connectionsTable = require('./connections_table');
+var SlaveToMasterSender = require('./slave_to_master_sender');
 var Rules = require('./rules');
 var failureCodes = require('../rpc/failure_codes');
 var PeerUpdateError = require('../rpc/failure_codes').PeerUpdateError;

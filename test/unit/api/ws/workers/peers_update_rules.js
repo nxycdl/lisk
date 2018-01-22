@@ -16,8 +16,8 @@
 var failureCodes = require('../../../../../api/ws/rpc/failure_codes');
 var PeerUpdateError = require('../../../../../api/ws/rpc/failure_codes').PeerUpdateError;
 var prefixedPeer = require('../../../../fixtures/peers').randomNormalizedPeer;
-var connectionsTable = require('../../../../../api/ws/workers/connectionsTable');
-var PeersUpdateRules = require('../../../../../api/ws/workers/peersUpdateRules');
+var connectionsTable = require('../../../../../api/ws/workers/connections_table');
+var PeersUpdateRules = require('../../../../../api/ws/workers/peers_update_rules');
 var Rules = require('../../../../../api/ws/workers/rules');
 
 describe('PeersUpdateRules', function () {

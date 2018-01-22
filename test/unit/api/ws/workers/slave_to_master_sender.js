@@ -13,7 +13,7 @@
  */
 'use strict';
 
-var SlaveToMasterSender = require('../../../../../api/ws/workers/slaveToMasterSender');
+var SlaveToMasterSender = require('../../../../../api/ws/workers/slave_to_master_sender');
 
 describe('SlaveToMasterSender', function () {
 

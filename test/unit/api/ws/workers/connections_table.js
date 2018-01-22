@@ -13,7 +13,7 @@
  */
 'use strict';
 
-var connectionsTable = require('../../../../../api/ws/workers/connectionsTable');
+var connectionsTable = require('../../../../../api/ws/workers/connections_table');
 
 describe('ConnectionsTable', function () {
 

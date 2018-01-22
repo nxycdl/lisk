@@ -13,8 +13,8 @@
  */
 'use strict';
 
-var failureCodes = require('../../../../../api/ws/rpc/failureCodes');
-var PeerUpdateError = require('../../../../../api/ws/rpc/failureCodes').PeerUpdateError;
+var failureCodes = require('../../../../../api/ws/rpc/failure_codes');
+var PeerUpdateError = require('../../../../../api/ws/rpc/failure_codes').PeerUpdateError;
 var prefixedPeer = require('../../../../fixtures/peers').randomNormalizedPeer;
 var connectionsTable = require('../../../../../api/ws/workers/connectionsTable');
 var PeersUpdateRules = require('../../../../../api/ws/workers/peersUpdateRules');

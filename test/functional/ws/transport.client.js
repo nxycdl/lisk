@@ -18,7 +18,7 @@ var randomstring = require('randomstring');
 var MasterWAMPServer = require('wamp-socket-cluster/MasterWAMPServer');
 
 var config = require('../../data/config.json');
-var failureCodes = require('../../../api/ws/rpc/failureCodes');
+var failureCodes = require('../../../api/ws/rpc/failure_codes');
 var wsRPC = require('../../../api/ws/rpc/wsRPC').wsRPC;
 var transport = require('../../../api/ws/transport');
 var System = require('../../../modules/system');

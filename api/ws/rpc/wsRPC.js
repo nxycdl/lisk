@@ -18,8 +18,8 @@ var MasterWAMPServer = require('wamp-socket-cluster/MasterWAMPServer');
 var scClient = require('socketcluster-client');
 var WAMPClient = require('wamp-socket-cluster/WAMPClient');
 
-var failureCodes = require('../../../api/ws/rpc/failureCodes');
-var PeerUpdateError = require('../../../api/ws/rpc/failureCodes').PeerUpdateError;
+var failureCodes = require('./failure_codes');
+var PeerUpdateError = require('./failure_codes').PeerUpdateError;
 var PromiseDefer = require('../../../helpers/promiseDefer');
 var System = require('../../../modules/system');
 

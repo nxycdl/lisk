@@ -19,7 +19,7 @@ var randomstring = require('randomstring');
 
 var typeRepresentatives = require('../../fixtures/typesRepresentatives.js');
 var wsApi = require('../../../helpers/wsApi');
-var failureCodes = require('../../../api/ws/rpc/failureCodes');
+var failureCodes = require('../../../api/ws/rpc/failure_codes');
 var WSServerMaster = require('../../common/ws/serverMaster');
 var System = require('../../../modules/system');
 

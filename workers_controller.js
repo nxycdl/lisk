@@ -25,7 +25,7 @@ var Handshake = require('./helpers/wsApi').middleware.Handshake;
 var extractHeaders = require('./helpers/wsApi').extractHeaders;
 var PeersUpdateRules = require('./api/ws/workers/peersUpdateRules');
 var Rules = require('./api/ws/workers/rules');
-var failureCodes = require('./api/ws/rpc/failureCodes');
+var failureCodes = require('./api/ws/rpc/failure_codes');
 var Logger = require('./logger');
 var config = require('./config.json');
 

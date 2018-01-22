@@ -19,7 +19,7 @@ var scClient = require('socketcluster-client');
 
 var testConfig = require('../../data/config.json');
 
-var failureCodes = require('../../../api/ws/rpc/failureCodes');
+var failureCodes = require('../../../api/ws/rpc/failure_codes');
 
 var ws = require('../../common/ws/communication');
 var wsServer = require('../../common/ws/server');

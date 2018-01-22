@@ -24,7 +24,7 @@ var WAMPClient = require('wamp-socket-cluster/WAMPClient');
 var baseConfig = require('../data/config.json');
 
 var blockchainReady = require('../common/utils/waitFor').blockchainReady;
-var WSServerMaster = require('../common/ws/serverMaster');
+var WSServerMaster = require('../common/ws/server_master');
 
 var Logger = require('../../logger');
 var logger = new Logger({filename: 'integrationTestsLogger.logs', echo: 'log'});

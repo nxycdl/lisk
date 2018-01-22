@@ -22,8 +22,8 @@
 
 var _ = require('lodash');
 var extend = require('extend');
-var apiCodes = require('./apiCodes');
-var checkIpInList = require('./checkIpInList');
+var apiCodes = require('./api_codes');
+var checkIpInList = require('./check_ip_in_list');
 
 /**
  * @namespace middleware

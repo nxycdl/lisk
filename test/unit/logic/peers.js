@@ -16,7 +16,7 @@
 var express = require('express');
 
 var failureCodes = require('../../../api/ws/rpc/failure_codes');
-var modulesLoader = require('../../common/modulesLoader');
+var modulesLoader = require('../../common/modules_loader');
 var prefixedPeer = require('../../fixtures/peers').randomNormalizedPeer;
 var Peers = require('../../../logic/peers.js');
 var Peer = require('../../../logic/peer.js');

@@ -26,7 +26,7 @@ var apiHelpers = require('../../../common/helpers/api');
 var randomUtil = require('../../../common/utils/random');
 var waitFor = require('../../../common/utils/waitFor');
 var normalizer = require('../../../common/utils/normalizer');
-var errorCodes = require('../../../../helpers/apiCodes');
+var errorCodes = require('../../../../helpers/api_codes');
 
 describe('POST /api/transactions (type 1) register second secret', function () {
 

@@ -19,11 +19,11 @@ var Promise = require('bluebird');
 
 var accountFixtures = require('../../../fixtures/accounts');
 
-var apiCodes = require('../../../../helpers/apiCodes');
+var apiCodes = require('../../../../helpers/api_codes');
 var constants = require('../../../../helpers/constants');
 
 var randomUtil = require('../../../common/utils/random');
-var swaggerEndpoint = require('../../../common/swaggerSpec');
+var swaggerEndpoint = require('../../../common/swagger_spec');
 var waitFor = require('../../../common/utils/waitFor');
 var apiHelpers = require('../../../common/helpers/api');
 var expectSwaggerParamError = apiHelpers.expectSwaggerParamError;

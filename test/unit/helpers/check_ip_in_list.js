@@ -15,7 +15,7 @@
 
 var ip = require('ip');
 
-var checkIpInList = require('../../../helpers/checkIpInList');
+var checkIpInList = require('../../../helpers/check_ip_in_list');
 
 describe('checkIpInList', function () {
 

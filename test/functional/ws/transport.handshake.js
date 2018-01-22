@@ -23,7 +23,7 @@ var failureCodes = require('../../../api/ws/rpc/failure_codes');
 
 var ws = require('../../common/ws/communication');
 var wsServer = require('../../common/ws/server');
-var WSServerMaster = require('../../common/ws/serverMaster');
+var WSServerMaster = require('../../common/ws/server_master');
 
 describe('handshake', function () {
 

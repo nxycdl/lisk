@@ -13,7 +13,7 @@
  */
 'use strict';
 
-var PromiseDefer = require('../../../helpers/promiseDefer');
+var PromiseDefer = require('../../../helpers/promise_defer');
 
 describe('PromiseDefer', function () {
 

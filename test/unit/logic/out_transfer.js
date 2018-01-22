@@ -16,15 +16,15 @@
 var crypto = require('crypto');
 var rewire = require('rewire');
 
-var modulesLoader = require('../../common/modulesLoader');
-var typesRepresentatives = require('../../fixtures/typesRepresentatives');
+var modulesLoader = require('../../common/modules_loader');
+var typesRepresentatives = require('../../fixtures/types_representatives');
 
-var OutTransfer = rewire('../../../logic/outTransfer');
+var OutTransfer = rewire('../../../logic/out_transfer');
 var ed = require('../../../helpers/ed');
 var constants = require('../../../helpers/constants');
 var slots = require('../../../helpers/slots');
 
-var testData = require('./test_data/outTransfer');
+var testData = require('./test_data/out_transfer');
 
 var validPassword = testData.validPassword;
 var validKeypair = testData.validKeypair;

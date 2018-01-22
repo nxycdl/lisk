@@ -22,10 +22,10 @@ var sinon = require('sinon');
 var config = require('../../../config.json');
 
 // Instantiate test subject
-var TransactionPool = rewire('../../../logic/transactionPool.js');
+var TransactionPool = rewire('../../../logic/transaction_pool.js');
 
 // Create fresh instance of jobsQueue
-var jobsQueue = rewire('../../../helpers/jobsQueue.js');
+var jobsQueue = rewire('../../../helpers/jobs_queue.js');
 
 describe('transactionPool', function () {
 

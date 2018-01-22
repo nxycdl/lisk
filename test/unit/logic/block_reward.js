@@ -13,7 +13,7 @@
  */
 'use strict';
 
-var BlockReward = require('../../../logic/blockReward.js');
+var BlockReward = require('../../../logic/block_reward.js');
 var constants = require('../../../helpers/constants.js');
 
 constants.rewards.distance = 3000000;

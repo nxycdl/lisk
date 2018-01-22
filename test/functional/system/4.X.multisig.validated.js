@@ -19,7 +19,7 @@ var accountFixtures = require('../../fixtures/accounts');
 var randomUtil = require('../../common/utils/random');
 var Scenarios = require('../common/scenarios');
 var localCommon = require('./common');
-var transactionTypes = require('../../../helpers/transactionTypes.js');
+var transactionTypes = require('../../../helpers/transaction_types.js');
 
 describe('system test (type 4) - checking registered multisignature transaction against other transaction types', function () {
 
@@ -60,7 +60,7 @@ describe('system test (type 4) - checking registered multisignature transaction 
 			done();
 		});
 	});
-	
+
 	describe('after forging one block', function () {
 
 		before(function (done) {

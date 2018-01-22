@@ -17,10 +17,10 @@ var async = require('async');
 var express = require('express');
 var randomstring = require('randomstring');
 
-var typeRepresentatives = require('../../fixtures/typesRepresentatives.js');
-var wsApi = require('../../../helpers/wsApi');
+var typeRepresentatives = require('../../fixtures/types_representatives.js');
+var wsApi = require('../../../helpers/ws_api');
 var failureCodes = require('../../../api/ws/rpc/failure_codes');
-var WSServerMaster = require('../../common/ws/serverMaster');
+var WSServerMaster = require('../../common/ws/server_master');
 var System = require('../../../modules/system');
 
 var config = __testContext.config;

@@ -17,7 +17,7 @@
 var rewire = require('rewire');
 
 // Init tests subject
-var jobsQueue = require('../../../helpers/jobsQueue.js');
+var jobsQueue = require('../../../helpers/jobs_queue.js');
 var peers = rewire('../../../modules/peers');
 
 // These tests are breaking other tests (relying on setTimeout) running on the same process because of a time stubbing

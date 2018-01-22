@@ -13,7 +13,7 @@
  */
 'use strict';
 var randomUtil = require('../../../common/utils/random');
-var swaggerSpec = require('../../../common/swaggerSpec');
+var swaggerSpec = require('../../../common/swagger_spec');
 var expectSwaggerParamError = require('../../../common/helpers/api').expectSwaggerParamError;
 
 describe('POST /api/transactions (general)', function () {

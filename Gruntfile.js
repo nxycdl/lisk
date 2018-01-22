@@ -89,7 +89,7 @@ module.exports = function (grunt) {
 							suite,
 							section
 						].filter(function (val) { return val; }).join(' ');
-						return 'node test/common/parallelTests.js ' + toExecute;
+						return 'node test/common/parallel_tests.js ' + toExecute;
 					}
 				},
 				maxBuffer: maxBufferSize

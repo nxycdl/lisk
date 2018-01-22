@@ -15,7 +15,7 @@
 
 var express = require('express');
 var ip = require('ip');
-var RoundChanges = require('../../../helpers/RoundChanges.js');
+var RoundChanges = require('../../../helpers/round_changes.js');
 
 describe('RoundChanges', function () {
 

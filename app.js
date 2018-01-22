@@ -46,12 +46,12 @@ var util = require('util');
 
 var genesisblock = require('./genesisBlock.json');
 var Logger = require('./logger.js');
-var workersControllerPath = path.join(__dirname, 'workersController');
+var workersControllerPath = path.join(__dirname, 'workers_controller');
 var wsRPC = require('./api/ws/rpc/wsRPC').wsRPC;
 
 var AppConfig = require('./helpers/config.js');
 var git = require('./helpers/git.js');
-var httpApi = require('./helpers/httpApi.js');
+var httpApi = require('./helpers/http_api.js');
 var Sequence = require('./helpers/sequence.js');
 var z_schema = require('./helpers/z_schema.js');
 var swagger = require('./config/swagger');

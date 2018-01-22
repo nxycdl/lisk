@@ -13,7 +13,7 @@
  */
 'use strict';
 
-var wsApi = require('../../helpers/wsApi');
+var wsApi = require('../../helpers/ws_api');
 var wsRPC = require('./rpc/wsRPC').wsRPC;
 var slaveRPCStub = require('./rpc/wsRPC').slaveRPCStub;
 

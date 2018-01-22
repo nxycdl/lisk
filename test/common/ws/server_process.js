@@ -40,7 +40,7 @@ function WSServer (headers) {
 		pingInterval: 5000,
 		pingTimeout: 60000,
 		processTermTimeout: 10000,
-		workerController: __dirname + '/serverWorker.js'
+		workerController: __dirname + '/server_worker.js'
 	};
 }
 

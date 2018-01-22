@@ -13,8 +13,7 @@
  */
 'use strict';
 
-var express = require('express');
-var ApiError = require('../../../helpers/apiError.js');
+var ApiError = require('../../../helpers/api_error.js');
 
 describe('helpers/apiError', function () {
 

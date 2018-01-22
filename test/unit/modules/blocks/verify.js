@@ -19,8 +19,8 @@ var rewire = require('rewire');
 
 var application = require('../../../common/application');
 var exceptions = require('../../../../helpers/exceptions');
-var modulesLoader = require('../../../common/modulesLoader');
-var clearDatabaseTable = require('../../../common/DBSandbox').clearDatabaseTable;
+var modulesLoader = require('../../../common/modules_loader');
+var clearDatabaseTable = require('../../../common/db_sandbox').clearDatabaseTable;
 
 var previousBlock = {
 	blockSignature: '696f78bed4d02faae05224db64e964195c39f715471ebf416b260bc01fa0148f3bddf559127b2725c222b01cededb37c7652293eb1a81affe2acdc570266b501',

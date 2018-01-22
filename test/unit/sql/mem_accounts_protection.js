@@ -15,8 +15,8 @@
 
 var randomstring = require('randomstring');
 
-var sql = require('../common/sql/memAccounts.js');
-var modulesLoader = require('../../common/modulesLoader');
+var sql = require('../common/sql/mem_accounts.js');
+var modulesLoader = require('../../common/modules_loader');
 var db;
 
 before(function (done) {

@@ -21,8 +21,8 @@ var SlaveWAMPServer = require('wamp-socket-cluster/SlaveWAMPServer');
 
 var Peer = require('./logic/peer');
 var System = require('./modules/system');
-var Handshake = require('./helpers/wsApi').middleware.Handshake;
-var extractHeaders = require('./helpers/wsApi').extractHeaders;
+var Handshake = require('./helpers/ws_api').middleware.Handshake;
+var extractHeaders = require('./helpers/ws_api').extractHeaders;
 var PeersUpdateRules = require('./api/ws/workers/peers_update_rules');
 var Rules = require('./api/ws/workers/rules');
 var failureCodes = require('./api/ws/rpc/failure_codes');

@@ -23,7 +23,7 @@ var wsRPC = require('../../../api/ws/rpc/wsRPC').wsRPC;
 var transport = require('../../../api/ws/transport');
 var System = require('../../../modules/system');
 
-var WSServer = require('../../common/ws/serverMaster');
+var WSServer = require('../../common/ws/server_master');
 var WSClient = require('../../common/ws/client');
 
 describe('ClientRPCStub', function () {

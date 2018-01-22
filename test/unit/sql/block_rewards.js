@@ -15,8 +15,8 @@
 
 var application = require('../../common/application');
 var constants = require('../../../helpers/constants');
-var sql = require('../common/sql/blockRewards');
-var modulesLoader = require('../../common/modulesLoader');
+var sql = require('../common/sql/block_rewards');
+var modulesLoader = require('../../common/modules_loader');
 
 function calcBlockReward (height, reward, done) {
 	return db.query(sql.calcBlockReward, {height: height}).then(function (rows) {

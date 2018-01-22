@@ -19,8 +19,8 @@ var genesisBlock = require('../../../data/genesisBlock.json');
 var application = require('../../../common/application');
 var loadTables = require('./processTablesData.json');
 
-var modulesLoader = require('../../../common/modulesLoader');
-var clearDatabaseTable = require('../../../common/DBSandbox').clearDatabaseTable;
+var modulesLoader = require('../../../common/modules_loader');
+var clearDatabaseTable = require('../../../common/db_sandbox').clearDatabaseTable;
 
 var constants = require('../../../../helpers/constants');
 

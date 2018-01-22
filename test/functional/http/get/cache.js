@@ -13,12 +13,12 @@
  */
 'use strict';
 
-var swaggerEndpoint = require('../../../common/swaggerSpec');
+var swaggerEndpoint = require('../../../common/swagger_spec');
 var Promise = require('bluebird');
 
 var randomUtil = require('../../../common/utils/random');
 var accountFixtures = require('../../../fixtures/accounts');
-var modulesLoader = require('../../../common/modulesLoader');
+var modulesLoader = require('../../../common/modules_loader');
 var apiHelpers = require('../../../common/helpers/api');
 var waitFor = require('../../../common/utils/waitFor');
 var waitForBlocksPromise = Promise.promisify(waitFor.blocks);

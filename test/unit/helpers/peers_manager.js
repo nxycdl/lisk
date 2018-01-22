@@ -15,7 +15,7 @@
 
 var prefixedPeer = require('../../fixtures/peers').randomNormalizedPeer;
 var Peer = require('../../../logic/peer');
-var peersManager = require('../../../helpers/peersManager');
+var peersManager = require('../../../helpers/peers_manager');
 
 describe('PeersManager', function () {
 

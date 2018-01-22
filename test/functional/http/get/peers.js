@@ -13,8 +13,8 @@
  */
 'use strict';
 
-var WSServer = require('../../../common/ws/serverMaster');
-var swaggerEndpoint = require('../../../common/swaggerSpec');
+var WSServer = require('../../../common/ws/server_master');
+var swaggerEndpoint = require('../../../common/swagger_spec');
 var apiHelpers = require('../../../common/helpers/api');
 var Promise = require('bluebird');
 

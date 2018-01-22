@@ -16,8 +16,8 @@
 var async = require('async');
 var config = require('../config.json');
 var constants = require('../helpers/constants.js');
-var jobsQueue = require('../helpers/jobsQueue.js');
-var transactionTypes = require('../helpers/transactionTypes.js');
+var jobsQueue = require('../helpers/jobs_queue.js');
+var transactionTypes = require('../helpers/transaction_types.js');
 
 // Private fields
 var modules, library, self, __private = {};

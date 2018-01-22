@@ -22,7 +22,7 @@ var prefixedPeer = require('../../fixtures/peers').randomNormalizedPeer;
 var Rules = require('../../../api/ws/workers/rules');
 
 var wsServer = require('../../common/ws/server');
-var WSServerMaster = require('../../common/ws/serverMaster');
+var WSServerMaster = require('../../common/ws/server_master');
 
 describe('RPC', function () {
 

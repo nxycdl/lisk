@@ -19,13 +19,13 @@ var Scenarios = require('../../common/scenarios');
 var accountFixtures = require('../../../fixtures/accounts');
 
 var constants = require('../../../../helpers/constants');
-var transactionTypes = require('../../../../helpers/transactionTypes.js');
+var transactionTypes = require('../../../../helpers/transaction_types.js');
 
 var apiHelpers = require('../../../common/helpers/api');
 var randomUtil = require('../../../common/utils/random');
 var normalizer = require('../../../common/utils/normalizer');
 var waitFor = require('../../../common/utils/waitFor');
-var swaggerEndpoint = require('../../../common/swaggerSpec');
+var swaggerEndpoint = require('../../../common/swagger_spec');
 var expectSwaggerParamError = apiHelpers.expectSwaggerParamError;
 
 describe('GET /api/accounts', function () {

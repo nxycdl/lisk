@@ -29,7 +29,7 @@ var z_schema = require('../../helpers/z_schema.js');
 var cacheHelper = require('../../helpers/cache.js');
 var Cache = require('../../modules/cache.js');
 var ed = require('../../helpers/ed');
-var jobsQueue = require('../../helpers/jobsQueue');
+var jobsQueue = require('../../helpers/jobs_queue');
 var Transaction = require('../../logic/transaction.js');
 var Account = require('../../logic/account.js');
 

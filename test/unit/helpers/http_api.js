@@ -13,9 +13,9 @@
  */
 'use strict';
 
-var checkIpInList = require('../../../helpers/checkIpInList');
-var httpApi = require('../../../helpers/httpApi');
-const apiCodes = require('../../../helpers/apiCodes');
+var checkIpInList = require('../../../helpers/check_ip_in_list');
+var httpApi = require('../../../helpers/http_api');
+const apiCodes = require('../../../helpers/api_codes');
 
 var validUrl = 'api/url';
 var validOriginalUrl = 'org/url';

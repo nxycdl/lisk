@@ -20,14 +20,14 @@ var randomstring = require('randomstring');
 
 
 var ed = require('../../../helpers/ed');
-var modulesLoader = require('../../common/modulesLoader.js');
+var modulesLoader = require('../../common/modules_loader.js');
 
 var randomUtil = require('../../common/utils/random');
 
 var Dapp = rewire('../../../logic/dapp.js');
 var constants = require('../../../helpers/constants');
 
-var typeRepresentatives = require('../../fixtures/typesRepresentatives.js');
+var typeRepresentatives = require('../../fixtures/types_representatives.js');
 
 var testData = require('./test_data/dapp.js');
 

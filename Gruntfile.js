@@ -19,7 +19,7 @@ var util = require('util');
 module.exports = function (grunt) {
 	var files = [
 		'logger.js',
-		'workersController.js',
+		'workers_controller.js',
 		'api/**/*.js',
 		'helpers/**/*.js',
 		'modules/**/*.js',
@@ -55,7 +55,7 @@ module.exports = function (grunt) {
 						util.format('mkdir -p %s/logs', version_dir),
 						util.format('mkdir -p %s/pids', version_dir),
 						util.format('cp %s/app.js %s', release_dir, version_dir),
-						util.format('cp %s/workersController.js %s', release_dir, version_dir),
+						util.format('cp %s/workers_controller.js %s', release_dir, version_dir),
 						util.format('cp %s/config.json %s', __dirname, version_dir),
 						util.format('cp %s/package.json %s', __dirname, version_dir),
 						util.format('cp %s/genesisBlock.json %s', __dirname, version_dir),

@@ -21,6 +21,7 @@ var modules;
 
 /**
  * @class
+ * @memberof controllers
  * @requires lodash
  * @requires helpers/apiError
  * @param {Object} scope - App instance.

@@ -39,7 +39,6 @@ function NodeController (scope) {
 }
 
 /**
- * @public
  * @param {Object} context
  * @param {function} next
  * @todo: add description of the function and its parameters
@@ -75,7 +74,6 @@ NodeController.getConstants = function (context, next) {
 };
 
 /**
- * @public
  * @param {Object} context
  * @param {function} next
  * @todo: add description of the function and its parameters
@@ -106,7 +104,6 @@ NodeController.getStatus = function (context, next) {
 };
 
 /**
- * @public
  * @param {Object} context
  * @param {function} next
  * @todo: add description of the function and its parameters
@@ -127,7 +124,6 @@ NodeController.getForgingStatus = function (context, next) {
 };
 
 /**
- * @public
  * @param {Object} context
  * @param {function} next
  * @todo: add description of the function and its parameters
@@ -152,7 +148,6 @@ NodeController.updateForgingStatus = function (context, next) {
 };
 
 /**
- * @public
  * @param {Object} context
  * @param {function} next
  * @todo: add description of the function and its parameters

@@ -780,21 +780,37 @@ describe('transport', function () {
 
 				describe('and transaction is defined', function () {
 
-					it('should call library.logger.debug');
-
-					it('should call library.logger.debug with "Transaction"');
-
-					it('should call library.logger.debug with transaction');
+					it('should call library.logger.debug with "Transaction" and transaction as arguments', function (done) {
+						__private.receiveTransaction(transaction, peerStub, 'This is a log message', function (err) {
+							expect(library.logger.debug.calledWith('Transaction', transaction)).to.be.true;
+							done();
+						});
+					});
 				});
 
-				it('should call callback with err.toString()');
+				it('should call callback with err.toString()', function (done) {
+					__private.receiveTransaction(transaction, peerStub, 'This is a log message', function (err) {
+						expect(err).to.equal(processUnconfirmedTransactionError);
+						done();
+					});
+				});
 			});
 
 			describe('when modules.transactions.processUnconfirmedTransaction succeeds', function () {
 
-				it('should call callback with error = null');
+				it('should call callback with error = null', function (done) {
+					__private.receiveTransaction(transaction, peerStub, 'This is a log message', function (err) {
+						expect(err).to.equal(null);
+						done();
+					});
+				});
 
-				it('should call callback with result = transaction.id');
+				it('should call callback with result = transaction.id', function (done) {
+					__private.receiveTransaction(transaction, peerStub, 'This is a log message', function (err, result) {
+						expect(result).to.equal(transaction.id);
+						done();
+					});
+				});
 			});
 		});
 	});

@@ -746,7 +746,12 @@ describe('transport', function () {
 					});
 				});
 
-				it('should call library.logic.peers.peersManager.getAddress with peer.nonce');
+				it('should call library.logic.peers.peersManager.getAddress with peer.nonce', function (done) {
+					__private.receiveTransaction(transaction, peerStub, 'This is a log message', function (err) {
+						expect(library.logic.peers.peersManager.getAddress.calledWith(peerStub.nonce)).to.be.true;
+						done();
+					});
+				});
 			});
 
 			it('should call modules.transactions.processUnconfirmedTransaction');

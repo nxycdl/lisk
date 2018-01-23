@@ -220,16 +220,53 @@ describe('outTransfer', function () {
 
 		describe('when transaction is valid', function () {
 
-			it('should call callback with error = null', function (done) {
+			it('should call callback with error = "Transaction type 7 is frozen"', function (done) {
+				console.log(transaction);
 				outTransfer.verify(transaction, sender, function (err) {
 					expect(err).to.equal('Transaction type 7 is frozen');
 					done();
 				});
 			});
 
-			it('should call callback with result = transaction', function (done) {
+			it('should call callback with result = undefined', function (done) {
 				outTransfer.verify(transaction, sender, function (err, res) {
 					expect(res).to.be.undefined;
+					done();
+				});
+			});
+		});
+
+		describe('when transaction is a hardcoded exception', function () {
+
+			var transactionException = {
+				'type': 7,
+				'amount': '1000000000',
+				'fee': '10000000',
+				'recipientId': '3771596687207619285L',
+				'senderPublicKey': '633bcfcddc56c8aa16fbb76d3c515b2738515c02bf8000edd0bbfd8ae269d82e',
+				'timestamp': 15,
+				'asset':
+					{
+						'outTransfer':
+							{
+								'dappId': '15359945250124697273',
+								'transactionId': 2
+							}
+					},
+				'signature': 'cea2003baa5fd3d8a38df9c4b3c2c05b89ad8eb41f3368453c543d1587643fcf94005e4de124ea41a8a554a73113519ecb77c93cd30206a391469ae96a463005',
+				'id': '8742556801784407667'
+			};
+
+			it('should call callback with error = null', function (done) {
+				outTransfer.verify(transactionException, sender, function (err) {
+					expect(err).to.null;
+					done();
+				});
+			});
+
+			it('should call callback with result = transaction', function (done) {
+				outTransfer.verify(transactionException, sender, function (err, res) {
+					expect(res).to.eql(transactionException);
 					done();
 				});
 			});

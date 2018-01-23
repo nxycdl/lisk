@@ -20,7 +20,7 @@ var ApiError = require('../../helpers/apiError');
 var modules;
 
 /**
- * @module controllers/signatures
+ * @class
  * @requires lodash
  * @requires module:helpers/apiError
  * @param {Object} scope - App instance.

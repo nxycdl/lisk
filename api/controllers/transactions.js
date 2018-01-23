@@ -21,7 +21,7 @@ var ApiError = require('../../helpers/apiError');
 var modules;
 
 /**
- * @module controllers/transactions
+ * @class
  * @requires lodash
  * @requires module:helpers/apiError
  * @requires module:helpers/swagger.generateParamsErrorObject

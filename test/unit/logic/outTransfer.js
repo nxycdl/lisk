@@ -132,10 +132,10 @@ describe('outTransfer', function () {
 
 		describe('when transaction.recipientId does not exist', function () {
 
-			it('should call callback with error = "Invalid recipient"', function (done) {
+			it('should call callback with error = "Transaction type 7 is frozen"', function (done) {
 				delete transaction.recipientId;
 				outTransfer.verify(transaction, sender, function (err) {
-					expect(err).to.equal('Invalid recipient');
+					expect(err).to.equal('Transaction type 7 is frozen');
 					done();
 				});
 			});
@@ -143,10 +143,10 @@ describe('outTransfer', function () {
 
 		describe('when transaction.amount does not exist', function () {
 
-			it('should call callback with error = "Invalid transaction amount"', function (done) {
+			it('should call callback with error = "Transaction type 7 is frozen"', function (done) {
 				delete transaction.amount;
 				outTransfer.verify(transaction, sender, function (err) {
-					expect(err).to.equal('Invalid transaction amount');
+					expect(err).to.equal('Transaction type 7 is frozen');
 					done();
 				});
 			});
@@ -154,10 +154,10 @@ describe('outTransfer', function () {
 
 		describe('when transaction.amount = 0', function () {
 
-			it('should call callback with error = "Invalid transaction amount"', function (done) {
+			it('should call callback with error = "Transaction type 7 is frozen"', function (done) {
 				transaction.amount = 0;
 				outTransfer.verify(transaction, sender, function (err) {
-					expect(err).to.equal('Invalid transaction amount');
+					expect(err).to.equal('Transaction type 7 is frozen');
 					done();
 				});
 			});
@@ -165,10 +165,10 @@ describe('outTransfer', function () {
 
 		describe('when transaction.asset does not exist', function () {
 
-			it('should call callback with error = "Invalid transaction asset"', function (done) {
+			it('should call callback with error = "Transaction type 7 is frozen"', function (done) {
 				delete transaction.asset;
 				outTransfer.verify(transaction, sender, function (err) {
-					expect(err).to.equal('Invalid transaction asset');
+					expect(err).to.equal('Transaction type 7 is frozen');
 					done();
 				});
 			});
@@ -176,10 +176,10 @@ describe('outTransfer', function () {
 
 		describe('when transaction.asset.inTransfer does not exist', function () {
 
-			it('should call callback with error = "Invalid transaction asset"', function (done) {
+			it('should call callback with error = "Transaction type 7 is frozen"', function (done) {
 				delete transaction.asset.outTransfer;
 				outTransfer.verify(transaction, sender, function (err) {
-					expect(err).to.equal('Invalid transaction asset');
+					expect(err).to.equal('Transaction type 7 is frozen');
 					done();
 				});
 			});
@@ -187,10 +187,10 @@ describe('outTransfer', function () {
 
 		describe('when transaction.asset.outTransfer = 0', function () {
 
-			it('should call callback with error = "Invalid transaction asset"', function (done) {
+			it('should call callback with error = "Transaction type 7 is frozen"', function (done) {
 				transaction.asset.outTransfer = 0;
 				outTransfer.verify(transaction, sender, function (err) {
-					expect(err).to.equal('Invalid transaction asset');
+					expect(err).to.equal('Transaction type 7 is frozen');
 					done();
 				});
 			});
@@ -198,10 +198,10 @@ describe('outTransfer', function () {
 
 		describe('when transaction.asset.outTransfer.dappId is invalid', function () {
 
-			it('should call callback with error = "Invalid outTransfer dappId"', function (done) {
+			it('should call callback with error = "Transaction type 7 is frozen"', function (done) {
 				transaction.asset.outTransfer.dappId = 'ab1231';
 				outTransfer.verify(transaction, sender, function (err) {
-					expect(err).to.equal('Invalid outTransfer dappId');
+					expect(err).to.equal('Transaction type 7 is frozen');
 					done();
 				});
 			});
@@ -209,10 +209,10 @@ describe('outTransfer', function () {
 
 		describe('when transaction.asset.outTransfer.transactionId is invalid', function () {
 
-			it('should call callback with error = "Invalid outTransfer transactionId"', function (done) {
+			it('should call callback with error = "Transaction type 7 is frozen"', function (done) {
 				transaction.asset.outTransfer.transactionId = 'ab1231';
 				outTransfer.verify(transaction, sender, function (err) {
-					expect(err).to.equal('Invalid outTransfer transactionId');
+					expect(err).to.equal('Transaction type 7 is frozen');
 					done();
 				});
 			});
@@ -222,14 +222,14 @@ describe('outTransfer', function () {
 
 			it('should call callback with error = null', function (done) {
 				outTransfer.verify(transaction, sender, function (err) {
-					expect(err).to.be.null;
+					expect(err).to.equal('Transaction type 7 is frozen');
 					done();
 				});
 			});
 
 			it('should call callback with result = transaction', function (done) {
 				outTransfer.verify(transaction, sender, function (err, res) {
-					expect(res).to.eql(transaction);
+					expect(res).to.be.undefined;
 					done();
 				});
 			});

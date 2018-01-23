@@ -186,10 +186,10 @@ describe('inTransfer', function () {
 
 		describe('when trs.recipientId exists', function () {
 
-			it('should call callback with error = "Invalid recipient"', function (done) {
+			it('should call callback with error = "Transaction type 6 is frozen"', function (done) {
 				trs.recipientId = '4835566122337813671L';
 				inTransfer.verify(trs, sender, function (err) {
-					expect(err).to.equal('Invalid recipient');
+					expect(err).to.equal('Transaction type 6 is frozen');
 					done();
 				});
 			});
@@ -197,10 +197,10 @@ describe('inTransfer', function () {
 
 		describe('when trs.amount does not exist', function () {
 
-			it('should call callback with error = "Invalid transaction amount"', function (done) {
+			it('should call callback with error = "Transaction type 6 is frozen"', function (done) {
 				trs.amount = undefined;
 				inTransfer.verify(trs, sender, function (err) {
-					expect(err).to.equal('Invalid transaction amount');
+					expect(err).to.equal('Transaction type 6 is frozen');
 					done();
 				});
 			});
@@ -208,10 +208,10 @@ describe('inTransfer', function () {
 
 		describe('when trs.amount = 0', function () {
 
-			it('should call callback with error = "Invalid transaction amount"', function (done) {
+			it('should call callback with error = "Transaction type 6 is frozen"', function (done) {
 				trs.amount = 0;
 				inTransfer.verify(trs, sender, function (err) {
-					expect(err).to.equal('Invalid transaction amount');
+					expect(err).to.equal('Transaction type 6 is frozen');
 					done();
 				});
 			});
@@ -219,10 +219,10 @@ describe('inTransfer', function () {
 
 		describe('when trs.asset does not exist', function () {
 
-			it('should call callback with error = "Invalid transaction asset"', function (done) {
+			it('should call callback with error = "Transaction type 6 is frozen"', function (done) {
 				trs.asset = undefined;
 				inTransfer.verify(trs, sender, function (err) {
-					expect(err).to.equal('Invalid transaction asset');
+					expect(err).to.equal('Transaction type 6 is frozen');
 					done();
 				});
 			});
@@ -230,10 +230,10 @@ describe('inTransfer', function () {
 
 		describe('when trs.asset.inTransfer does not exist', function () {
 
-			it('should call callback with error = "Invalid transaction asset"', function (done) {
+			it('should call callback with error = "Transaction type 6 is frozen"', function (done) {
 				trs.asset.inTransfer = undefined;
 				inTransfer.verify(trs, sender, function (err) {
-					expect(err).to.equal('Invalid transaction asset');
+					expect(err).to.equal('Transaction type 6 is frozen');
 					done();
 				});
 			});
@@ -241,10 +241,10 @@ describe('inTransfer', function () {
 
 		describe('when trs.asset.inTransfer = 0', function () {
 
-			it('should call callback with error = "Invalid transaction asset"', function (done) {
+			it('should call callback with error = "Transaction type 6 is frozen"', function (done) {
 				trs.asset.inTransfer = 0;
 				inTransfer.verify(trs, sender, function (err) {
-					expect(err).to.equal('Invalid transaction asset');
+					expect(err).to.equal('Transaction type 6 is frozen');
 					done();
 				});
 			});
@@ -252,21 +252,21 @@ describe('inTransfer', function () {
 
 		it('should call library.db.dapps.countByTransactionId', function (done) {
 			inTransfer.verify(trs, sender, function () {
-				expect(dbStub.dapps.countByTransactionId.calledOnce).to.be.true;
+				expect(dbStub.dapps.countByTransactionId.calledOnce).to.be.false;
 				done();
 			});
 		});
 
 		it('should call library.db.dapps.countByTransactionId with trs.asset.inTransfer.dappId', function (done) {
 			inTransfer.verify(trs, sender, function () {
-				expect(dbStub.dapps.countByTransactionId.calledWith(trs.asset.inTransfer.dappId)).to.be.true;
+				expect(dbStub.dapps.countByTransactionId.calledWith(trs.asset.inTransfer.dappId)).to.be.false;
 				done();
 			});
 		});
 
 		it('should call library.db.dapps.countByTransactionId with trs.asset.inTransfer.dappId', function (done) {
 			inTransfer.verify(trs, sender, function () {
-				expect(dbStub.dapps.countByTransactionId.calledWith(trs.asset.inTransfer.dappId)).to.be.true;
+				expect(dbStub.dapps.countByTransactionId.calledWith(trs.asset.inTransfer.dappId)).to.be.false;
 				done();
 			});
 		});
@@ -293,9 +293,9 @@ describe('inTransfer', function () {
 					dbStub.dapps.countByTransactionId = sinonSandbox.stub().resolves({count: 0});
 				});
 
-				it('should call callback with error', function (done) {
+				it('should call callback with error = "Transaction type 6 is frozen"', function (done) {
 					inTransfer.verify(trs, sender, function (err) {
-						expect(err).to.equal('Application not found: ' + trs.asset.inTransfer.dappId);
+						expect(err).to.equal('Transaction type 6 is frozen');
 						done();
 					});
 				});
@@ -307,9 +307,9 @@ describe('inTransfer', function () {
 					dbStub.dapps.countByTransactionId = sinonSandbox.stub().resolves({count: 1});
 				});
 
-				it('should call callback with error = undefined', function (done) {
+				it('should call callback with error = "Transaction type 6 is frozen"', function (done) {
 					inTransfer.verify(trs, sender, function (err) {
-						expect(err).to.be.undefined;
+						expect(err).to.equal('Transaction type 6 is frozen');
 						done();
 					});
 				});

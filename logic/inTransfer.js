@@ -15,6 +15,7 @@
 
 var constants = require('../helpers/constants.js');
 var slots = require('../helpers/slots.js');
+var exceptions = require('../helpers/exceptions.js');
 
 // Private fields
 var modules, library, shared;
@@ -68,6 +69,10 @@ InTransfer.prototype.calculateFee = function (transaction, sender) {
  * @return {setImmediateCallback} errors message | transaction
  */
 InTransfer.prototype.verify = function (transaction, sender, cb, tx) {
+	if (exceptions.inTransfers.indexOf(transaction.id) == -1) {
+		return setImmediate(cb, 'Transaction type ' + transaction.type + ' is frozen');
+	}
+
 	if (transaction.recipientId) {
 		return setImmediate(cb, 'Invalid recipient');
 	}

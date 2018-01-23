@@ -94,7 +94,9 @@ describe('transport', function () {
 			}
 		};
 
-		peerStub = {};
+		peerStub = {
+			nonce: 'sYHEDBKcScaAAAYg'
+		};
 
 		swaggerHelper.getResolvedSwaggerSpec().then(function (resolvedSpec) {
 			defaultScope.swagger = {
@@ -619,7 +621,7 @@ describe('transport', function () {
 
 		describe('receiveTransaction', function () {
 
-			var transaction;
+			var transaction, peerAddressString;
 
 			beforeEach(function () {
 				transaction = {
@@ -638,7 +640,7 @@ describe('transport', function () {
 					callback(doneCallback);
 				});
 
-				var peerAddressString = '40.40.40.40:5000';
+				peerAddressString = '40.40.40.40:5000';
 
 				library = {
 					logic: {
@@ -727,14 +729,22 @@ describe('transport', function () {
 
 			describe('when peer is undefined', function () {
 
-				it('should call library.logger.debug with "Received transaction " + transaction.id + " from public client"');
+				it('should call library.logger.debug with "Received transaction " + transaction.id + " from public client"', function (done) {
+					__private.receiveTransaction(transaction, undefined, 'This is a log message', function (err) {
+						expect(library.logger.debug.calledWith('Received transaction ' + transaction.id + ' from public client')).to.be.true;
+						done();
+					});
+				});
 			});
 
 			describe('when peer is defined', function () {
 
-				it('should call library.logger.debug with "Received transaction " + transaction.id + " from peer"');
-
-				it('should call library.logic.peers.peersManager.getAddress');
+				it('should call library.logger.debug with "Received transaction " + transaction.id + " from peer ..."', function (done) {
+					__private.receiveTransaction(transaction, peerStub, 'This is a log message', function (err) {
+						expect(library.logger.debug.calledWith('Received transaction ' + transaction.id + ' from peer ' + peerAddressString)).to.be.true;
+						done();
+					});
+				});
 
 				it('should call library.logic.peers.peersManager.getAddress with peer.nonce');
 			});

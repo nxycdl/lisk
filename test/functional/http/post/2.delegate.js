@@ -27,7 +27,7 @@ var sendTransactionPromise = apiHelpers.sendTransactionPromise;
 
 var randomUtil = require('../../../common/utils/random');
 var normalizer = require('../../../common/utils/normalizer');
-var waitFor = require('../../../common/utils/waitFor');
+var waitFor = require('../../../common/utils/wait_for');
 var errorCodes = require('../../../../helpers/api_codes');
 
 describe('POST /api/transactions (type 2) register delegate', function () {

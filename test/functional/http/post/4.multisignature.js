@@ -24,7 +24,7 @@ var apiCodes = require('../../../../helpers/api_codes');
 var constants = require('../../../../helpers/constants');
 
 var randomUtil = require('../../../common/utils/random');
-var waitFor = require('../../../common/utils/waitFor');
+var waitFor = require('../../../common/utils/wait_for');
 var swaggerEndpoint = require('../../../common/swagger_spec');
 var apiHelpers = require('../../../common/helpers/api');
 var sendTransactionPromise = apiHelpers.sendTransactionPromise;

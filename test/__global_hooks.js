@@ -14,7 +14,7 @@
 'use strict';
 
 before(function (done) {
-	require('./common/utils/waitFor').blockchainReady(done);
+	require('./common/utils/wait_for').blockchainReady(done);
 });
 
 afterEach(function () {

@@ -17,7 +17,7 @@ var _ = require('lodash');
 
 var System = require('../../../modules/system');
 var WSServer = require('./server_master');
-var wsRPC = require('../../../api/ws/rpc/wsRPC');
+var wsRPC = require('../../../api/ws/rpc/ws_rpc');
 
 var ClientRPCStub = wsRPC.ClientRPCStub;
 var ConnectionState = wsRPC.ConnectionState;

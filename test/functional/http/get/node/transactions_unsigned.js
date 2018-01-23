@@ -22,7 +22,7 @@ var sendTransactionPromise = apiHelpers.sendTransactionPromise;
 var accountFixtures = require('../../../../fixtures/accounts');
 var Promise = require('bluebird');
 var normalizer = require('../../../../common/utils/normalizer');
-var waitFor = require('../../../../common/utils/waitFor');
+var waitFor = require('../../../../common/utils/wait_for');
 
 describe('GET /api/node', function () {
 

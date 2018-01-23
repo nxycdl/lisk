@@ -24,7 +24,7 @@ var constants = require('../../../../helpers/constants');
 
 var apiHelpers = require('../../../common/helpers/api');
 var randomUtil = require('../../../common/utils/random');
-var waitFor = require('../../../common/utils/waitFor');
+var waitFor = require('../../../common/utils/wait_for');
 var normalizer = require('../../../common/utils/normalizer');
 var errorCodes = require('../../../../helpers/api_codes');
 

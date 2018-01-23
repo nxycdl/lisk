@@ -13,7 +13,7 @@
  */
 'use strict';
 
-var z_schema_express = require('../../../helpers/z_schema-express');
+var z_schema_express = require('../../../helpers/z_schema_express');
 
 describe('z_schema.express', function () {
 

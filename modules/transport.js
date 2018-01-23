@@ -26,7 +26,7 @@ var Peer = require('../logic/peer');
 var PeerUpdateError = require('../api/ws/rpc/failure_codes').PeerUpdateError;
 var Rules = require('../api/ws/workers/rules');
 var System = require('../modules/system');
-var wsRPC = require('../api/ws/rpc/wsRPC').wsRPC;
+var wsRPC = require('../api/ws/rpc/ws_rpc').wsRPC;
 
 // Private fields
 var modules, definitions, library, self, __private = {};

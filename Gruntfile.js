@@ -58,7 +58,7 @@ module.exports = function (grunt) {
 						util.format('cp %s/workers_controller.js %s', release_dir, version_dir),
 						util.format('cp %s/config.json %s', __dirname, version_dir),
 						util.format('cp %s/package.json %s', __dirname, version_dir),
-						util.format('cp %s/genesisBlock.json %s', __dirname, version_dir),
+						util.format('cp %s/genesis_block.json %s', __dirname, version_dir),
 						util.format('cp %s/LICENSE %s', __dirname, version_dir),
 						util.format('mkdir -p %s/db/sql/init/migrations', version_dir),
 						util.format('cp %s/db/sql/init/*.sql %s/db/sql/init/', __dirname, version_dir),

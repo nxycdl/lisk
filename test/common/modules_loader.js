@@ -22,7 +22,7 @@ var dirname = path.join(__dirname, '..', '..');
 var config = require(path.join(dirname, '/test/data/config.json'));
 var Sequence = require(path.join(dirname, '/helpers', 'sequence.js'));
 var database = require(path.join(dirname, '/db'));
-var genesisblock = require(path.join(dirname, '/test/data/genesisBlock.json'));
+var genesisblock = require(path.join(dirname, '/test/data/genesis_block.json'));
 var Logger = require(dirname + '/logger.js');
 
 var z_schema = require('../../helpers/z_schema.js');

@@ -44,10 +44,10 @@ var path = require('path');
 var SocketCluster = require('socketcluster');
 var util = require('util');
 
-var genesisblock = require('./genesisBlock.json');
+var genesisblock = require('./genesis_block.json');
 var Logger = require('./logger.js');
 var workersControllerPath = path.join(__dirname, 'workers_controller');
-var wsRPC = require('./api/ws/rpc/wsRPC').wsRPC;
+var wsRPC = require('./api/ws/rpc/ws_rpc').wsRPC;
 
 var AppConfig = require('./helpers/config.js');
 var git = require('./helpers/git.js');
@@ -374,7 +374,7 @@ d.run(function () {
 				}
 			}));
 
-			scope.network.app.use(require('./helpers/z_schema-express.js')(scope.schema));
+			scope.network.app.use(require('./helpers/z_schema_express.js')(scope.schema));
 
 			scope.network.app.use(httpApi.middleware.logClientConnections.bind(null, scope.logger));
 

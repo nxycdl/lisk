@@ -15,7 +15,7 @@
 
 var Promise = require('bluebird');
 
-var waitFor = require('../../../common/utils/waitFor');
+var waitFor = require('../../../common/utils/wait_for');
 var waitForBlocksPromise = Promise.promisify(waitFor.blocks);
 
 var swaggerEndpoint = require('../../../common/swagger_spec');

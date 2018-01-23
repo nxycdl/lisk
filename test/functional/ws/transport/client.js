@@ -19,7 +19,7 @@ var MasterWAMPServer = require('wamp-socket-cluster/MasterWAMPServer');
 
 var config = require('../../../data/config.json');
 var failureCodes = require('../../../../api/ws/rpc/failure_codes');
-var wsRPC = require('../../../../api/ws/rpc/wsRPC').wsRPC;
+var wsRPC = require('../../../../api/ws/rpc/ws_rpc').wsRPC;
 var transport = require('../../../../api/ws/transport');
 var System = require('../../../../modules/system');
 
